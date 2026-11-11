@@ -1,0 +1,835 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#ECECEC;
+}
+
+/* HEADER */
+
+header{
+    background:#5AA5F5;
+    display:flex;
+    align-items:center;
+    height:130px;
+}
+
+.logo-section{
+    width:140px;
+}
+
+.logo-section img{
+    width:130px;
+}
+
+.header-content{
+    flex:1;
+    text-align:center;
+}
+
+.header-content h1{
+    color:#666;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+nav{
+    font-size:16px;
+    font-weight:bold;
+}
+
+nav a{
+    text-decoration:none;
+    color:#666;
+}
+
+/* =====================================
+   HOME PAGE
+===================================== */
+
+.hero-section{
+
+    width:90%;
+
+    margin:0 auto;
+
+    display:flex;
+
+    align-items:flex-start;
+}
+
+/* LEFT IMAGE */
+
+.hero-image{
+
+    width:32%;
+}
+
+.hero-image img{
+
+    width:100%;
+
+    display:block;
+}
+
+/* RIGHT CONTENT */
+
+.hero-text{
+
+    width:68%;
+
+    padding:15px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.hero-text h2{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+}
+
+.hero-text p{
+
+    color:#666;
+
+    font-size:24px;
+
+    line-height:1.6;
+
+    text-align:left;
+}
+
+/* BUTTON */
+
+.button-container{
+
+    text-align:center;
+
+    margin-top:35px;
+}
+
+.start-btn{
+
+    display:inline-block;
+
+    background:#FF8C42;
+
+    color:#2E8B57;
+
+    text-decoration:none;
+
+    padding:18px 55px;
+
+    border-radius:30px;
+
+    font-size:22px;
+
+    font-weight:bold;
+}
+
+.start-btn:hover{
+
+    background:#ff7a1a;
+}
+
+/* FEATURED ADVENTURES */
+
+.featured{
+
+    width:90%;
+
+    margin:20px auto;
+
+    text-align:center;
+}
+
+.featured h2{
+
+    color:#666;
+
+    font-size:40px;
+
+    margin-bottom:25px;
+}
+
+.feature-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:70px;
+}
+
+.feature-card{
+
+    width:200px;
+
+    height:140px;
+
+    background:#5AA5F5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#2E8B57;
+
+    font-size:28px;
+
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#5AA5F5;
+    display:flex;
+    justify-content:center;
+    gap:200px;
+    padding:15px;
+    font-size:12px;
+    color:#666;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero-section{
+        flex-direction:column;
+    }
+
+    .hero-image,
+    .hero-text{
+        width:100%;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .feature-row{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+/* =====================================
+   ABOUT PAGE
+===================================== */
+
+.about-section{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    background:#ECECEC;
+}
+
+/* Left Image */
+
+.about-image{
+
+    width:33%;
+}
+
+.about-image img{
+
+    width:100%;
+
+    display:block;
+}
+
+/* Right Content */
+
+.about-content{
+
+    width:67%;
+
+    padding:20px;
+}
+
+/* Headings */
+
+.about-content h2{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:40px;
+
+    margin-bottom:15px;
+}
+
+/* Paragraphs */
+
+.about-content p{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+}
+
+/* =====================================
+   WHY CHOOSE US
+===================================== */
+
+.why-section{
+
+    width:90%;
+
+    margin:auto;
+
+    background:#2E8B57;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.why-section h2{
+
+    font-size:40px;
+
+    margin-bottom:25px;
+}
+
+.why-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:60px;
+}
+
+.why-card{
+
+    width:180px;
+
+    height:130px;
+
+    background:#5AA5F5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-size:20px;
+}
+/* =========================
+   OVERVIEW PAGE
+========================= */
+
+.overview-container{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:20px;
+}
+
+.overview-container h2{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:20px;
+}
+
+.search-bar{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#D9D9D9;
+
+    margin-bottom:20px;
+}
+
+.package-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px,1fr));
+
+    gap:15px;
+}
+
+.package-card{
+
+    background:#5AA5F5;
+
+    padding:20px;
+
+    min-height:220px;
+}
+
+.package-card h3{
+
+    color:#2E8B57;
+
+    margin-bottom:40px;
+}
+
+.package-card p{
+
+    color:#666;
+
+    margin-bottom:30px;
+}
+
+.view-btn{
+
+    display:inline-block;
+
+    background:#FF8C42;
+
+    color:#2E8B57;
+
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.page-wrapper{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.content{
+
+    flex:1;
+}
+
+/* =========================
+   PACKAGE PAGE
+========================= */
+
+.package-page{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    margin-top:10px;
+}
+
+.package-image{
+
+    width:52%;
+}
+
+.package-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.package-details{
+
+    width:48%;
+
+    background:#2E8B57;
+
+    color:white;
+
+    padding:20px;
+}
+
+.package-details h2{
+
+    font-size:26px;
+
+    margin-bottom:20px;
+}
+
+.package-details h3{
+
+    margin-top:15px;
+
+    margin-bottom:10px;
+}
+
+.package-details p{
+
+    line-height:1.5;
+}
+
+.package-details ul{
+
+    margin-left:20px;
+
+    line-height:1.6;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+/* PACKAGE BUTTONS */
+
+.package-buttons{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px 0;
+}
+
+/* BUTTON STYLE */
+
+.package-buttons .btn{
+
+    display:block;
+
+    width:220px;
+
+    text-align:center;
+
+    background:#FF8C42;
+
+    color:#2E8B57;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:15px;
+
+    border-radius:30px;
+
+    margin:10px auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    width:90%;
+
+    margin:auto;
+
+    background:#5AA5F5;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    padding:20px;
+}
+/* =====================================
+   FEE CALCULATOR BUTTONS
+===================================== */
+
+.center{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:20px 0;
+}
+
+/* Orange Buttons */
+
+.btn{
+
+    display:inline-block;
+
+    background:#FF8C42;
+
+    color:#2E8B57;
+
+    text-decoration:none;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    min-width:220px;
+
+    text-align:center;
+}
+
+.btn:hover{
+
+    background:#ff7a1a;
+
+}
+
+/* Calculate Button */
+
+#calculateBtn{
+
+    background:#FF8C42;
+
+    color:#2E8B57;
+
+}
+
+/* Submit Button */
+
+#submitBtn{
+
+    background:#FF8C42;
+
+    color:#2E8B57;
+
+}
+/* ==========================
+   FEE CALCULATOR
+========================== */
+
+.fee-layout{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:20px;
+}
+
+.column{
+
+    flex:1;
+}
+
+.column h2{
+
+    color:#2E8B57;
+
+    margin-bottom:15px;
+}
+
+.form-input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#D9D9D9;
+}
+
+.discount-box{
+
+    background:#5AA5F5;
+
+    padding:20px;
+}
+
+.quote-box{
+
+    width:90%;
+
+    margin:20px auto;
+
+    background:#5AA5F5;
+
+    padding:20px;
+}
+/* =====================================
+   CONTACT PAGE
+===================================== */
+
+/* Main Contact Layout */
+
+.contact-layout{
+
+    width:90%;
+
+    margin:20px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+/* Contact Information Card */
+
+.contact-card{
+
+    width:45%;
+
+    background:#5AA5F5;
+
+    padding:20px;
+
+    border-radius:5px;
+}
+
+.contact-card h2{
+
+    color:#2E8B57;
+
+    margin-bottom:15px;
+}
+
+/* Contact Form */
+
+.contact-form{
+
+    width:45%;
+}
+
+.contact-form h2{
+
+    color:#2E8B57;
+
+    margin-bottom:15px;
+}
+
+/* Input Fields */
+
+.form-input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#D9D9D9;
+}
+
+/* =====================================
+   GOOGLE MAP
+===================================== */
+
+.map-container{
+
+    width:60%;
+
+    margin:30px auto;
+}
+
+.map-container iframe{
+
+    width:100%;
+
+    height:300px;
+
+    border:none;
+
+    border-radius:5px;
+}
+
+/* Mobile View */
+
+@media(max-width:768px){
+
+    .contact-layout{
+
+        flex-direction:column;
+    }
+
+    .contact-card,
+    .contact-form{
+
+        width:100%;
+    }
+
+    .map-placeholder{
+
+        width:100%;
+    }
+}

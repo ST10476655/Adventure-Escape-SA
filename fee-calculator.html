@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Set -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Website -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>
+
+        Calculate Fees
+
+    </title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="logo-section">
+
+                <img src="images/logo.png"
+                     alt="Adventure Escape SA Logo">
+
+            </div>
+
+            <div class="header-content">
+
+                <h1>
+
+                    Adventure Escape SA
+
+                </h1>
+
+                <nav>
+
+                    <a href="index.html">Home</a> |
+
+                    <a href="about.html">About Us</a> |
+
+                    <a href="overview.html">Packages</a> |
+
+                    <a href="overview.html">Activities</a> |
+
+                    <a href="fee-calculator.html">
+                        Calculate Fees
+                    </a> |
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+            <div class="fee-layout">
+
+                <!-- CUSTOMER SECTION -->
+
+                <div class="column">
+
+                    <h2>
+
+                        Customer Information
+
+                    </h2>
+
+                    <input type="text"
+                           id="customerName"
+                           class="form-input"
+                           placeholder="Full Name">
+
+                    <input type="tel"
+                           id="customerPhone"
+                           class="form-input"
+                           placeholder="Phone Number">
+
+                    <input type="email"
+                           id="customerEmail"
+                           class="form-input"
+                           placeholder="Email Address">
+
+                </div>
+
+                <!-- PACKAGE SECTION -->
+
+                <div class="column">
+
+                    <h2>
+
+                        Select Adventures
+
+                    </h2>
+
+                    <label>
+                        <input type="checkbox"
+                               value="1500"
+                               class="package">
+                        Ultimate Adventure Day
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input type="checkbox"
+                               value="1500"
+                               class="package">
+                        Family Explorer Package
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input type="checkbox"
+                               value="1500"
+                               class="package">
+                        Mountain Adventure Package
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input type="checkbox"
+                               value="1500"
+                               class="package">
+                        Corporate Team Challenge
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input type="checkbox"
+                               value="750"
+                               class="package">
+                        Ziplining Adventure
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input type="checkbox"
+                               value="750"
+                               class="package">
+                        Kayaking Experience
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input type="checkbox"
+                               value="750"
+                               class="package">
+                        Rock Climbing Session
+                    </label>
+
+                </div>
+
+                <!-- DISCOUNT BOX -->
+
+                <div class="column">
+
+                    <div class="discount-box">
+
+                        <h2>
+
+                            Discount Information
+
+                        </h2>
+
+                        <p>
+
+                            2 Adventures = 5%
+
+                        </p>
+
+                        <p>
+
+                            3 Adventures = 10%
+
+                        </p>
+
+                        <p>
+
+                            More Than 3 = 15%
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <div class="center">
+
+                <button
+                    id="calculateBtn"
+                    class="btn">
+
+                    Calculate Total
+
+                </button>
+
+            </div>
+
+            <!-- QUOTE SUMMARY -->
+
+            <div class="quote-box">
+
+                <h2>
+
+                    Quote Summary
+
+                </h2>
+
+                <div id="quoteSummary">
+
+                    No Quote Calculated Yet
+
+                </div>
+
+            </div>
+
+            <!-- SUBMIT -->
+
+            <div class="center">
+
+                <button
+                    id="submitBtn"
+                    class="btn">
+
+                    Submit Booking Request
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div>
+
+                <p>
+                    Phone:
+                    +27 21 555 1234
+                </p>
+
+                <p>
+                    Email:
+                    bookings@adventureescapesa.co.za
+                </p>
+
+                <p>
+                    Address:
+                    Cape Town,
+                    Western Cape,
+                    South Africa
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+
+                    Social Media Icons
+
+                </p>
+
+                <ul>
+
+                    <li>Facebook</li>
+
+                    <li>Instagram</li>
+
+                    <li>X (Twitter)</li>
+
+                </ul>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
