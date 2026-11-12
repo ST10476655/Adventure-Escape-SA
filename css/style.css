@@ -994,3 +994,20 @@ footer{
     font-weight:bold;
     min-height:18px;
 }
+
+/* =====================================
+   FEE CALCULATOR - MOBILE
+===================================== */
+
+@media(max-width:768px){
+
+    .fee-layout{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .fee-layout .form-input{
+        width:100%;
+        box-sizing:border-box;
+    }
+}
