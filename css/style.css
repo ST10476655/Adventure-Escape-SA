@@ -987,3 +987,10 @@ footer{
     font-weight:bold;
     background:#ffe8d6;
 }
+
+.search-message{
+    text-align:center;
+    color:#c0392b;
+    font-weight:bold;
+    min-height:18px;
+}

@@ -412,10 +412,52 @@ function setupContactForm() {
 }
 
 // =====================================
+// PACKAGE SEARCH
+// =====================================
+
+function setupPackageSearch() {
+
+    const searchInput = document.getElementById("packageSearch");
+
+    // Only run on the overview page
+    if (!searchInput) {
+        return;
+    }
+
+    const cards = document.querySelectorAll(".package-card");
+    const message = document.getElementById("searchMessage");
+
+    searchInput.addEventListener("input", function () {
+
+        const term = searchInput.value.trim().toLowerCase();
+        let matches = 0;
+
+        cards.forEach(function (card) {
+
+            const isMatch = card.textContent.toLowerCase().includes(term);
+
+            card.style.display = isMatch ? "" : "none";
+
+            if (isMatch) {
+                matches++;
+            }
+        });
+
+        if (term !== "" && matches === 0) {
+            message.textContent =
+                "No adventures match \"" + searchInput.value.trim() + "\". Try another search.";
+        } else {
+            message.textContent = "";
+        }
+    });
+}
+
+// =====================================
 // START
 // =====================================
 
 document.addEventListener("DOMContentLoaded", function () {
     setupFeeCalculator();
     setupContactForm();
+    setupPackageSearch();
 });

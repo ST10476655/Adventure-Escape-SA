@@ -97,9 +97,14 @@
 
         </h2>
 
-        <input type="text"
+        <label for="packageSearch" class="sr-only">Search packages</label>
+
+        <input type="search"
+               id="packageSearch"
                placeholder="Search Packages..."
                class="search-bar">
+
+        <p class="search-message" id="searchMessage" aria-live="polite"></p>
 
         <!-- PACKAGE GRID -->
 
@@ -282,6 +287,10 @@
         </div>
 
     </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
 
 </body>
 
