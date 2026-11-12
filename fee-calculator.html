@@ -114,20 +114,32 @@
 
                     </h2>
 
+                    <label for="customerName" class="sr-only">Full Name</label>
+
                     <input type="text"
                            id="customerName"
                            class="form-input"
                            placeholder="Full Name">
+
+                    <p class="error-message" id="customerNameError" aria-live="polite"></p>
+
+                    <label for="customerPhone" class="sr-only">Phone Number</label>
 
                     <input type="tel"
                            id="customerPhone"
                            class="form-input"
                            placeholder="Phone Number">
 
+                    <p class="error-message" id="customerPhoneError" aria-live="polite"></p>
+
+                    <label for="customerEmail" class="sr-only">Email Address</label>
+
                     <input type="email"
                            id="customerEmail"
                            class="form-input"
                            placeholder="Email Address">
+
+                    <p class="error-message" id="customerEmailError" aria-live="polite"></p>
 
                 </div>
 
@@ -140,6 +152,8 @@
                         Select Adventures
 
                     </h2>
+
+                    <p class="error-message" id="packageError" aria-live="polite"></p>
 
                     <label>
                         <input type="checkbox"
@@ -321,6 +335,8 @@
                 </button>
 
             </div>
+
+            <p class="form-status" id="bookingStatus" aria-live="polite"></p>
 
         </div>
 

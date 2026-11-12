@@ -937,3 +937,53 @@ footer{
         font-size:13px;
     }
 }
+
+/* =====================================
+   FORM VALIDATION
+===================================== */
+
+.sr-only{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    border:0;
+}
+
+.error-message{
+    color:#c0392b;
+    font-size:13px;
+    margin:4px 0 10px;
+    min-height:16px;
+}
+
+.input-error{
+    border:2px solid #c0392b !important;
+}
+
+.form-status{
+    text-align:center;
+    font-weight:bold;
+    margin:12px auto;
+    max-width:700px;
+}
+
+.status-success{
+    color:#1e7e34;
+}
+
+.status-error{
+    color:#c0392b;
+}
+
+.status-warning{
+    color:#b36b00;
+}
+
+.quote-table .total-row td{
+    font-weight:bold;
+    background:#ffe8d6;
+}
