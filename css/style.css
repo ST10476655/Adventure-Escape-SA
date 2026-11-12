@@ -880,3 +880,60 @@ footer{
 .dropdown:focus-within .dropdown-menu{
     display:block;
 }
+
+/* =====================================
+   TABLES
+===================================== */
+
+.price-list{
+    max-width:800px;
+    margin:30px auto;
+    padding:0 15px;
+}
+
+.price-list h2{
+    text-align:center;
+}
+
+.info-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#ffffff;
+    font-size:14px;
+}
+
+.info-table caption{
+    caption-side:top;
+    text-align:left;
+    font-weight:bold;
+    padding:6px 0;
+    color:#444;
+}
+
+.info-table th,
+.info-table td{
+    border:1px solid #d6d6d6;
+    padding:8px 10px;
+    text-align:left;
+}
+
+.info-table thead th{
+    background:#5AA5F5;
+    color:#ffffff;
+}
+
+.info-table tbody tr:nth-child(even){
+    background:#f2f7fd;
+}
+
+.table-note{
+    font-size:12px;
+    margin-top:8px;
+}
+
+@media(max-width:768px){
+
+    .info-table{
+        font-size:13px;
+    }
+}
