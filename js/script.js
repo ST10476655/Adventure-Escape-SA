@@ -335,9 +335,87 @@ function setupFeeCalculator() {
 }
 
 // =====================================
+// CONTACT FORM
+// =====================================
+
+function validateMessage(value) {
+
+    if (value === "") {
+        return "Please enter a message.";
+    }
+
+    if (value.length < 10) {
+        return "Your message must be at least 10 characters long.";
+    }
+
+    return "";
+}
+
+function setupContactForm() {
+
+    const form = document.getElementById("enquiryForm");
+
+    // Only run on the contact page
+    if (!form) {
+        return;
+    }
+
+    const nameInput = document.getElementById("enquiryName");
+    const emailInput = document.getElementById("enquiryEmail");
+    const messageInput = document.getElementById("enquiryMessage");
+
+    const nameError = document.getElementById("enquiryNameError");
+    const emailError = document.getElementById("enquiryEmailError");
+    const messageError = document.getElementById("enquiryMessageError");
+    const status = document.getElementById("enquiryStatus");
+
+    nameInput.addEventListener("blur", function () {
+        checkField(nameInput, nameError, validateName);
+    });
+
+    emailInput.addEventListener("blur", function () {
+        checkField(emailInput, emailError, validateEmail);
+    });
+
+    messageInput.addEventListener("blur", function () {
+        checkField(messageInput, messageError, validateMessage);
+    });
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const nameOk = checkField(nameInput, nameError, validateName);
+        const emailOk = checkField(emailInput, emailError, validateEmail);
+        const messageOk = checkField(messageInput, messageError, validateMessage);
+
+        if (!nameOk || !emailOk || !messageOk) {
+
+            status.textContent = "Please fix the highlighted fields.";
+            status.className = "form-status status-error";
+
+            const firstInvalid = form.querySelector(".input-error");
+            if (firstInvalid) {
+                firstInvalid.focus();
+            }
+
+            return;
+        }
+
+        status.textContent =
+            "Thank you, " + nameInput.value.trim() +
+            "! Your enquiry has been sent. We will reply within 24 hours.";
+        status.className = "form-status status-success";
+
+        form.reset();
+    });
+}
+
+// =====================================
 // START
 // =====================================
 
 document.addEventListener("DOMContentLoaded", function () {
     setupFeeCalculator();
+    setupContactForm();
 });

@@ -160,28 +160,50 @@
 
                     <br>
 
+                    <form id="enquiryForm" novalidate>
+
+                    <label for="enquiryName" class="sr-only">Full Name</label>
+
                     <input type="text"
+                           id="enquiryName"
                            placeholder="Full Name"
                            class="form-input">
 
+                    <p class="error-message" id="enquiryNameError" aria-live="polite"></p>
+
+                    <label for="enquiryEmail" class="sr-only">Email Address</label>
+
                     <input type="email"
+                           id="enquiryEmail"
                            placeholder="Email Address"
                            class="form-input">
 
+                    <p class="error-message" id="enquiryEmailError" aria-live="polite"></p>
+
+                    <label for="enquiryMessage" class="sr-only">Message</label>
+
                     <textarea
+                        id="enquiryMessage"
                         class="form-input"
                         rows="6"
+                        maxlength="500"
                         placeholder="Enter Message"></textarea>
+
+                    <p class="error-message" id="enquiryMessageError" aria-live="polite"></p>
 
                     <div class="center">
 
-                        <button class="btn">
+                        <button type="submit" class="btn">
 
                             Send Enquiry
 
                         </button>
 
                     </div>
+
+                    <p class="form-status" id="enquiryStatus" aria-live="polite"></p>
+
+                    </form>
 
                 </div>
 
@@ -257,6 +279,10 @@
         </footer>
 
     </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
 
 </body>
 
