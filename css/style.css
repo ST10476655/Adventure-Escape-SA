@@ -833,3 +833,50 @@ footer{
         width:100%;
     }
 }
+/* =====================================
+   DROP-DOWN NAVIGATION
+===================================== */
+
+.main-nav{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px;
+}
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:220px;
+    background:#ffffff;
+    border-radius:6px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    padding:6px 0;
+    z-index:1000;
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:8px 14px;
+    font-size:14px;
+    font-weight:normal;
+    color:#444;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus{
+    background:#ff7a1a;
+    color:#ffffff;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu{
+    display:block;
+}
