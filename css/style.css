@@ -1062,3 +1062,152 @@ h2{
 p, li, label, td, th{
     color:var(--text);
 }
+
+/* =====================================
+   UI/UX REFRESH: HEADER & NAVIGATION
+   Logo, title and menu share one aligned row that lines up
+   with the page content below it.
+===================================== */
+
+header{
+    height:auto;
+    min-height:96px;
+    padding:14px max(4%, calc((100% - var(--container)) / 2));
+    gap:24px;
+    box-shadow:0 2px 10px rgba(29,43,58,0.12);
+    position:relative;
+    z-index:100;
+}
+
+.logo-section{
+    width:auto;
+    flex-shrink:0;
+}
+
+.logo-section img{
+    width:88px;
+    height:auto;
+    display:block;
+    background:var(--white);
+    border-radius:14px;
+    padding:4px;
+}
+
+.header-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    text-align:left;
+}
+
+.header-content h1{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+    color:var(--navy);
+    white-space:nowrap;
+}
+
+.main-nav{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:flex-end;
+    gap:4px;
+    font-size:16px;
+}
+
+.main-nav a,
+.dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 14px;
+    border-radius:999px;
+    color:var(--navy);
+    font-weight:700;
+    text-decoration:none;
+    transition:background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav > a:hover,
+.main-nav > a:focus-visible,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus-visible,
+.dropdown:focus-within .dropdown-toggle{
+    background:var(--white);
+    color:var(--green);
+    outline:none;
+}
+
+.dropdown-menu{
+    top:calc(100% + 6px);
+    border-radius:12px;
+    padding:8px;
+    box-shadow:var(--shadow);
+}
+
+/* invisible bridge so the menu doesn't close while moving the mouse down */
+.dropdown-menu::before{
+    content:"";
+    position:absolute;
+    top:-8px;
+    left:0;
+    right:0;
+    height:8px;
+}
+
+.dropdown-menu a{
+    display:block;
+    border-radius:8px;
+    padding:9px 12px;
+    font-size:15px;
+    font-weight:600;
+    color:var(--navy);
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus{
+    background:var(--blue-soft);
+    color:var(--green);
+}
+
+@media(max-width:960px){
+
+    header{
+        flex-wrap:wrap;
+    }
+
+    .header-content{
+        flex-direction:column;
+        align-items:flex-start;
+        flex:1;
+    }
+
+    .main-nav{
+        justify-content:flex-start;
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:12px 16px;
+        gap:14px;
+    }
+
+    .logo-section img{
+        width:64px;
+    }
+
+    .header-content h1{
+        font-size:20px;
+        white-space:normal;
+    }
+
+    .main-nav a,
+    .dropdown-toggle{
+        padding:6px 10px;
+        font-size:15px;
+    }
+}
