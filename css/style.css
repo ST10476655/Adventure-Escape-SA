@@ -1011,3 +1011,1041 @@ footer{
         box-sizing:border-box;
     }
 }
+
+/* =====================================
+   UI/UX REFRESH: TYPOGRAPHY & COLOUR
+   Arial throughout, matching the presentation's style guide.
+   Text colours chosen to pass WCAG contrast checks.
+===================================== */
+
+:root{
+    --blue:#5AA5F5;
+    --blue-soft:#EAF3FE;
+    --green:#2E8B57;
+    --orange:#FF7A1A;
+    --orange-dark:#F06A0F;
+    --navy:#1D2B3A;
+    --text:#2B3644;
+    --muted:#5A6573;
+    --page:#ECECEC;
+    --white:#FFFFFF;
+    --radius:16px;
+    --shadow:0 6px 18px rgba(29,43,58,0.10);
+    --container:1140px;
+}
+
+*{
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:var(--page);
+    color:var(--text);
+    font-size:17px;
+    line-height:1.6;
+}
+
+h1, h2, h3, h4,
+.header-content h1,
+.hero-text h2,
+.featured h2{
+    font-family:Arial, sans-serif;
+    color:var(--navy);
+    line-height:1.25;
+    letter-spacing:-0.2px;
+}
+
+h2{
+    color:var(--green);
+}
+
+p, li, label, td, th{
+    color:var(--text);
+}
+
+/* =====================================
+   UI/UX REFRESH: HEADER & NAVIGATION
+   Logo, title and menu share one aligned row that lines up
+   with the page content below it.
+===================================== */
+
+header{
+    height:auto;
+    min-height:96px;
+    padding:14px max(4%, calc((100% - var(--container)) / 2));
+    gap:24px;
+    box-shadow:0 2px 10px rgba(29,43,58,0.12);
+    position:relative;
+    z-index:100;
+}
+
+.logo-section{
+    width:auto;
+    flex-shrink:0;
+}
+
+.logo-section img{
+    width:88px;
+    height:auto;
+    display:block;
+    background:var(--white);
+    border-radius:14px;
+    padding:4px;
+}
+
+.header-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    text-align:left;
+}
+
+.header-content h1{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+    color:var(--navy);
+    white-space:nowrap;
+}
+
+.main-nav{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:flex-end;
+    gap:4px;
+    font-size:16px;
+}
+
+.main-nav a,
+.dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 14px;
+    border-radius:999px;
+    color:var(--navy);
+    font-weight:700;
+    text-decoration:none;
+    transition:background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav > a:hover,
+.main-nav > a:focus-visible,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus-visible,
+.dropdown:focus-within .dropdown-toggle{
+    background:var(--white);
+    color:var(--green);
+    outline:none;
+}
+
+.dropdown-menu{
+    top:calc(100% + 6px);
+    border-radius:12px;
+    padding:8px;
+    box-shadow:var(--shadow);
+}
+
+/* invisible bridge so the menu doesn't close while moving the mouse down */
+.dropdown-menu::before{
+    content:"";
+    position:absolute;
+    top:-8px;
+    left:0;
+    right:0;
+    height:8px;
+}
+
+.dropdown-menu a{
+    display:block;
+    border-radius:8px;
+    padding:9px 12px;
+    font-size:15px;
+    font-weight:600;
+    color:var(--navy);
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus{
+    background:var(--blue-soft);
+    color:var(--green);
+}
+
+@media(max-width:960px){
+
+    header{
+        flex-wrap:wrap;
+    }
+
+    .header-content{
+        flex-direction:column;
+        align-items:flex-start;
+        flex:1;
+    }
+
+    .main-nav{
+        justify-content:flex-start;
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:12px 16px;
+        gap:14px;
+    }
+
+    .logo-section img{
+        width:64px;
+    }
+
+    .header-content h1{
+        font-size:20px;
+        white-space:normal;
+    }
+
+    .main-nav a,
+    .dropdown-toggle{
+        padding:6px 10px;
+        font-size:15px;
+    }
+}
+
+/* =====================================
+   UI/UX REFRESH: BUTTONS
+   One button style everywhere: white text on a deeper orange
+   (passes WCAG contrast for large bold text), same height,
+   padding and radius, with hover, press and keyboard focus states.
+===================================== */
+
+.btn,
+.start-btn,
+.view-btn,
+.package-buttons .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:50px;
+    padding:12px 30px;
+    margin:0;
+    border:none;
+    border-radius:999px;
+    background:var(--orange);
+    color:var(--white);
+    font-family:Arial, sans-serif;
+    font-size:17px;
+    font-weight:600;
+    line-height:1.2;
+    letter-spacing:0.2px;
+    text-align:center;
+    text-decoration:none;
+    white-space:nowrap;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(230,92,0,0.25);
+    transition:background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.start-btn:hover,
+.view-btn:hover,
+.package-buttons .btn:hover{
+    background:var(--orange-dark);
+    color:var(--white);
+    transform:translateY(-2px);
+    box-shadow:0 6px 16px rgba(201,79,0,0.30);
+}
+
+.btn:active,
+.start-btn:active,
+.view-btn:active{
+    transform:translateY(0);
+}
+
+.btn:focus-visible,
+.start-btn:focus-visible,
+.view-btn:focus-visible{
+    outline:3px solid var(--navy);
+    outline-offset:3px;
+}
+
+/* Smaller button inside cards */
+.view-btn{
+    min-height:44px;
+    padding:10px 22px;
+    font-size:15px;
+}
+
+/* Main call to action on the home page */
+.start-btn{
+    min-height:56px;
+    padding:14px 38px;
+    font-size:18px;
+}
+
+/* Book Now / Request Quote sit side by side, same width */
+.package-buttons{
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:16px;
+    padding:28px 0 8px;
+}
+
+.package-buttons .btn{
+    width:220px;
+}
+
+/* Secondary action: outlined so the main action stands out */
+.package-buttons .btn + .btn{
+    background:var(--white);
+    color:var(--orange-dark);
+    box-shadow:inset 0 0 0 2px var(--orange);
+}
+
+.package-buttons .btn + .btn:hover{
+    background:#FFF1E6;
+    color:var(--orange-dark);
+}
+
+.center{
+    margin:28px 0;
+}
+
+@media(max-width:600px){
+
+    .btn,
+    .package-buttons .btn{
+        width:100%;
+        max-width:340px;
+        min-width:0;
+    }
+}
+
+/* =====================================
+   UI/UX REFRESH: CARDS
+   Cards in a row share the same height, padding and corner radius;
+   text is left-aligned and buttons line up along the bottom edge.
+===================================== */
+
+/* Package overview */
+.overview-container{
+    width:92%;
+    max-width:var(--container);
+    margin:36px auto;
+}
+
+.overview-container h2{
+    text-align:center;
+    color:var(--navy);
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.search-bar{
+    display:block;
+    width:100%;
+    max-width:560px;
+    margin:0 auto 28px;
+    padding:14px 22px;
+    border:2px solid transparent;
+    border-radius:999px;
+    background:var(--white);
+    box-shadow:var(--shadow);
+    font-size:16px;
+}
+
+.search-bar:focus{
+    outline:none;
+    border-color:var(--blue);
+}
+
+.package-grid{
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:24px;
+    align-items:stretch;
+}
+
+.package-card{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    min-height:0;
+    padding:24px;
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.package-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px rgba(29,43,58,0.14);
+}
+
+.package-card h3{
+    color:var(--navy);
+    font-size:19px;
+    margin:0 0 12px;
+}
+
+.package-card p{
+    display:inline-block;
+    margin:0 0 20px;
+    padding:4px 14px;
+    border-radius:999px;
+    background:var(--blue-soft);
+    color:var(--green);
+    font-weight:700;
+}
+
+/* pushes the button to the bottom so every card's button lines up */
+.package-card .view-btn{
+    margin-top:auto;
+}
+
+/* Featured adventures on the home page */
+.featured{
+    width:92%;
+    max-width:var(--container);
+    margin:48px auto;
+}
+
+.featured h2{
+    font-size:32px;
+    color:var(--navy);
+    margin-bottom:24px;
+}
+
+.feature-row{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+}
+
+.feature-card{
+    width:auto;
+    height:150px;
+    border-radius:var(--radius);
+    background:var(--blue);
+    color:var(--navy);
+    font-family:Arial, sans-serif;
+    font-size:24px;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:var(--shadow);
+    transition:transform 0.2s ease, background 0.2s ease;
+}
+
+.feature-card:hover,
+.feature-card:focus-visible{
+    transform:translateY(-4px);
+    background:#7BB8F7;
+    outline:none;
+}
+
+/* Why choose us (About page) */
+.why-row{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+}
+
+.why-card{
+    width:auto;
+    min-height:110px;
+    margin:0;
+    border-radius:var(--radius);
+    background:var(--white);
+    color:var(--navy);
+    font-weight:700;
+    box-shadow:var(--shadow);
+}
+
+@media(max-width:900px){
+
+    .why-row{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .feature-row,
+    .why-row{
+        grid-template-columns:1fr;
+    }
+
+    .feature-card{
+        height:110px;
+    }
+}
+
+/* =====================================
+   UI/UX REFRESH: PAGE LAYOUT, ALIGNMENT & SPACING
+   Every section uses the same content width as the header and
+   footer, text is left-aligned for easy reading, and related items
+   are grouped close together (proximity) with consistent gaps
+   between groups.
+===================================== */
+
+.hero-section,
+.about-section,
+.package-page,
+.fee-layout,
+.quote-box,
+.contact-layout,
+.price-list,
+.why-section,
+.map-container{
+    width:92%;
+    max-width:var(--container);
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* ---- Home hero ---- */
+.hero-section{
+    margin-top:40px;
+    gap:40px;
+    align-items:center;
+}
+
+.hero-image{
+    width:40%;
+}
+
+.hero-image img,
+.about-image img{
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.hero-text{
+    width:60%;
+    padding:0;
+    align-items:flex-start;
+}
+
+.hero-text h2{
+    text-align:left;
+    font-size:40px;
+    margin-bottom:16px;
+}
+
+.hero-text p{
+    font-size:19px;
+    color:var(--text);
+    margin-bottom:0;
+}
+
+.button-container{
+    text-align:left;
+    margin-top:28px;
+}
+
+/* ---- About ---- */
+.about-section{
+    margin-top:40px;
+    gap:40px;
+    align-items:flex-start;
+    background:transparent;
+}
+
+.about-image{
+    width:40%;
+}
+
+.about-content{
+    width:60%;
+    padding:0;
+}
+
+.about-content h2{
+    text-align:left;
+    font-size:28px;
+    color:var(--green);
+    margin:0 0 6px;
+}
+
+.about-content p{
+    text-align:left;
+    font-size:18px;
+    color:var(--text);
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+.why-section{
+    margin-top:48px;
+    margin-bottom:48px;
+    padding:36px 32px;
+    border-radius:20px;
+    background:var(--green);
+}
+
+.why-section h2{
+    color:var(--white);
+    margin-bottom:24px;
+}
+
+/* ---- Package detail pages ---- */
+.package-page{
+    margin-top:40px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.package-details{
+    padding:32px;
+    background:var(--green);
+}
+
+.package-details h2,
+.package-details h3,
+.package-details p,
+.package-details li{
+    color:var(--white);
+}
+
+.package-details h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.package-details h3{
+    font-size:17px;
+    margin:18px 0 4px;
+    opacity:0.9;
+}
+
+/* ---- Fee calculator ---- */
+.fee-layout{
+    margin-top:40px;
+    padding:0;
+    gap:28px;
+    align-items:stretch;
+}
+
+.column h2,
+.discount-box h2,
+.contact-card h2,
+.contact-form h2{
+    font-size:22px;
+    color:var(--green);
+    margin:0 0 16px;
+}
+
+.column{
+    padding:24px;
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.column label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:6px 0;
+    cursor:pointer;
+}
+
+.column input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:var(--orange);
+}
+
+.discount-box{
+    padding:0;
+    background:transparent;
+}
+
+.price-list{
+    margin-top:40px;
+}
+
+.price-list h2{
+    text-align:center;
+    color:var(--navy);
+    margin-bottom:12px;
+}
+
+.info-table{
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.info-table th,
+.info-table td{
+    padding:11px 14px;
+    border:none;
+    border-bottom:1px solid #E3E8EE;
+}
+
+.info-table thead th{
+    background:var(--navy);
+}
+
+.info-table tbody tr:nth-child(even){
+    background:#F7F9FB;
+}
+
+.info-table caption{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.quote-box{
+    margin-top:12px;
+    padding:28px;
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.quote-box h2{
+    color:var(--navy);
+    margin-bottom:12px;
+}
+
+/* ---- Forms: label, field and its error grouped tightly ---- */
+.form-input{
+    display:block;
+    width:100%;
+    margin:0;
+    padding:13px 18px;
+    border:2px solid #DCE3EA;
+    border-radius:12px;
+    background:var(--white);
+    font-size:16px;
+    color:var(--text);
+    transition:border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus{
+    outline:none;
+    border-color:var(--blue);
+    box-shadow:0 0 0 4px rgba(90,165,245,0.20);
+}
+
+.error-message{
+    margin:4px 0 14px 4px;
+    min-height:18px;
+}
+
+/* ---- Contact ---- */
+.contact-layout{
+    margin-top:40px;
+    gap:28px;
+    align-items:flex-start;
+}
+
+.contact-card,
+.contact-form{
+    width:50%;
+    padding:28px;
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.contact-card p{
+    margin-bottom:10px;
+}
+
+.contact-card strong,
+.contact-card b{
+    color:var(--navy);
+}
+
+.contact-form .center{
+    justify-content:flex-start;
+    margin:12px 0 0;
+}
+
+.map-container{
+    margin-top:28px;
+    margin-bottom:48px;
+}
+
+.map-container iframe{
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+/* ---- Responsive ---- */
+@media(max-width:900px){
+
+    .hero-section,
+    .about-section,
+    .package-page,
+    .fee-layout,
+    .contact-layout{
+        flex-direction:column;
+    }
+
+    .hero-image,
+    .hero-text,
+    .about-image,
+    .about-content,
+    .package-image,
+    .package-details,
+    .contact-card,
+    .contact-form{
+        width:100%;
+    }
+
+    .hero-text h2{
+        font-size:32px;
+    }
+}
+
+/* =====================================
+   UI/UX REFRESH: FOOTER
+   Full width like the header, two aligned columns that line up
+   with the page content, readable text size, and grouped links.
+===================================== */
+
+footer.site-footer{
+    display:block;
+    width:100%;
+    margin:48px 0 0;
+    padding:36px max(4%, calc((100% - var(--container)) / 2)) 20px;
+    background:var(--navy);
+    color:#DCE6F2;
+    font-size:15px;
+    gap:0;
+    text-align:left;
+}
+
+.footer-inner{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:32px;
+    align-items:start;
+}
+
+.site-footer h3{
+    color:var(--white);
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.footer-list,
+.footer-social{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.footer-list li{
+    display:flex;
+    gap:12px;
+    margin-bottom:8px;
+    color:#DCE6F2;
+}
+
+.footer-label{
+    min-width:70px;
+    font-weight:700;
+    color:var(--blue);
+}
+
+.site-footer a{
+    color:#DCE6F2;
+    text-decoration:none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible{
+    color:var(--white);
+    text-decoration:underline;
+}
+
+.footer-social{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.footer-social span{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.10);
+    color:var(--white);
+    font-weight:600;
+}
+
+.footer-copy{
+    margin-top:28px;
+    padding-top:16px;
+    border-top:1px solid rgba(255,255,255,0.15);
+    color:#A9B7C6;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+
+    .footer-list li{
+        flex-direction:column;
+        gap:0;
+    }
+}
+
+/* =====================================
+   UI/UX REFRESH: ALIGNMENT FIXES
+===================================== */
+
+/* Fee calculator buttons had their own older colours */
+#calculateBtn,
+#submitBtn{
+    background:var(--orange);
+    color:var(--white);
+}
+
+#calculateBtn:hover,
+#submitBtn:hover{
+    background:var(--orange-dark);
+}
+
+/* Columns size to their content instead of stretching */
+.fee-layout{
+    align-items:flex-start;
+}
+
+/* Grid, table and panels share the same left and right edges */
+.overview-container,
+.price-list{
+    padding:0;
+}
+
+.contact-card p{
+    margin-bottom:12px;
+}
+
+/* =====================================
+   UI/UX REFRESH: PHONE LAYOUT
+   Logo and title share the first row; the menu gets its own
+   full-width row. Calculator panels use the full screen width.
+===================================== */
+
+@media(max-width:600px){
+
+    header{
+        display:grid;
+        grid-template-columns:auto 1fr;
+        align-items:center;
+        column-gap:12px;
+        row-gap:10px;
+    }
+
+    .header-content{
+        display:contents;
+    }
+
+    .header-content h1{
+        grid-column:2;
+        font-size:20px;
+    }
+
+    .main-nav{
+        grid-column:1 / -1;
+        justify-content:flex-start;
+    }
+
+    .logo-section img{
+        width:56px;
+    }
+}
+
+@media(max-width:900px){
+
+    .fee-layout .column{
+        width:100%;
+    }
+}
+
+/* =====================================
+   STYLE GUIDE MATCH (see presentation slide 22)
+   Sky blue header and footer, forest green headings,
+   Adventure orange buttons, light grey background, Arial.
+   Dark navy text is used on blue and orange so it stays readable
+   (contrast above 5:1).
+===================================== */
+
+/* Orange buttons with dark text */
+.btn,
+.start-btn,
+.view-btn,
+.package-buttons .btn,
+#calculateBtn,
+#submitBtn{
+    background:var(--orange);
+    color:var(--navy);
+    font-weight:700;
+    box-shadow:0 4px 12px rgba(255,122,26,0.30);
+}
+
+.btn:hover,
+.start-btn:hover,
+.view-btn:hover,
+.package-buttons .btn:hover,
+#calculateBtn:hover,
+#submitBtn:hover{
+    background:var(--orange-dark);
+    color:var(--navy);
+}
+
+.package-buttons .btn + .btn,
+.package-buttons .btn + .btn:hover{
+    background:var(--white);
+    color:var(--navy);
+    box-shadow:inset 0 0 0 2px var(--orange);
+}
+
+/* Sky blue footer, like the header */
+footer.site-footer{
+    background:var(--blue);
+    color:var(--navy);
+}
+
+.site-footer h3,
+.footer-list li,
+.site-footer a,
+.footer-copy{
+    color:var(--navy);
+}
+
+.footer-label{
+    color:var(--navy);
+    font-weight:700;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible{
+    color:var(--navy);
+}
+
+.footer-social span{
+    background:var(--white);
+    color:var(--navy);
+}
+
+.footer-copy{
+    border-top-color:rgba(29,43,58,0.20);
+}
+
+/* Table headers in sky blue */
+.info-table thead th{
+    background:var(--blue);
+    color:var(--navy);
+}
