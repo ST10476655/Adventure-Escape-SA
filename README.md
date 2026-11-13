@@ -10,7 +10,9 @@
 | Item | Link |
 |---|---|
 | Published website | https://st10476655.github.io/Adventure-Escape-SA/ |
-| Video presentation (YouTube, unlisted) | https://youtu.be/gclzBvhsvno |
+| Video presentation (YouTube, unlisted) | https://youtu.be/nLHKTmEa38o |
+| Video presentation repository | https://github.com/ST10476655/Adventure-Escape-SA-Video-Presentation |
+| Presentation repository | https://github.com/ST10476655/Presentation |
 | Task 2 video 1 (YouTube) | https://youtu.be/0MV1XqKhx50 |
 | Task 2 video 2 (YouTube) | https://youtu.be/Im6Z787_A2M |
 | Mobile application repository | https://github.com/ST10476655/AdventureEscapeSA |
