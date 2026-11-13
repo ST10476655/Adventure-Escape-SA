@@ -1011,3 +1011,54 @@ footer{
         box-sizing:border-box;
     }
 }
+
+/* =====================================
+   UI/UX REFRESH: TYPOGRAPHY & COLOUR
+   Poppins for headings, Nunito for body text.
+   Text colours chosen to pass WCAG contrast checks.
+===================================== */
+
+:root{
+    --blue:#5AA5F5;
+    --blue-soft:#EAF3FE;
+    --green:#1F7A4D;
+    --orange:#E65C00;
+    --orange-dark:#C94F00;
+    --navy:#1D2B3A;
+    --text:#2B3644;
+    --muted:#5A6573;
+    --page:#F4F6F8;
+    --white:#FFFFFF;
+    --radius:16px;
+    --shadow:0 6px 18px rgba(29,43,58,0.10);
+    --container:1140px;
+}
+
+*{
+    font-family:'Nunito', Arial, sans-serif;
+}
+
+body{
+    background:var(--page);
+    color:var(--text);
+    font-size:17px;
+    line-height:1.6;
+}
+
+h1, h2, h3, h4,
+.header-content h1,
+.hero-text h2,
+.featured h2{
+    font-family:'Poppins', Arial, sans-serif;
+    color:var(--navy);
+    line-height:1.25;
+    letter-spacing:-0.2px;
+}
+
+h2{
+    color:var(--green);
+}
+
+p, li, label, td, th{
+    color:var(--text);
+}
