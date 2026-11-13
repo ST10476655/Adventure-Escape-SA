@@ -47,25 +47,52 @@
 
                 </h1>
 
-                <nav>
+                <nav class="main-nav">
 
-                    <a href="index.html">Home</a> |
+                <a href="index.html">Home</a>
 
-                    <a href="about.html">About Us</a> |
+                |
 
-                    <a href="overview.html">Packages</a> |
+                <a href="about.html">About Us</a>
 
-                    <a href="overview.html">Activities</a> |
+                |
 
-                    <a href="fee-calculator.html">
-                        Calculate Fees
-                    </a> |
+                <div class="dropdown">
 
-                    <a href="contact.html">
-                        Contact Us
-                    </a>
+                    <a href="overview.html" class="dropdown-toggle">Packages &#9662;</a>
 
-                </nav>
+                    <div class="dropdown-menu">
+                        <a href="ultimate-adventure.html">Ultimate Adventure Day</a>
+                        <a href="family-explorer.html">Family Explorer Package</a>
+                        <a href="mountain-adventure.html">Mountain Adventure Package</a>
+                        <a href="corporate-challenge.html">Corporate Team Challenge</a>
+                    </div>
+
+                </div>
+
+                |
+
+                <div class="dropdown">
+
+                    <a href="overview.html" class="dropdown-toggle">Activities &#9662;</a>
+
+                    <div class="dropdown-menu">
+                        <a href="ziplining.html">Ziplining Adventure</a>
+                        <a href="kayaking.html">Kayaking Experience</a>
+                        <a href="rock-climbing.html">Rock Climbing Session</a>
+                    </div>
+
+                </div>
+
+                |
+
+                <a href="fee-calculator.html">Calculate Fees</a>
+
+                |
+
+                <a href="contact.html">Contact Us</a>
+
+            </nav>
 
             </div>
 
@@ -87,20 +114,32 @@
 
                     </h2>
 
+                    <label for="customerName" class="sr-only">Full Name</label>
+
                     <input type="text"
                            id="customerName"
                            class="form-input"
                            placeholder="Full Name">
+
+                    <p class="error-message" id="customerNameError" aria-live="polite"></p>
+
+                    <label for="customerPhone" class="sr-only">Phone Number</label>
 
                     <input type="tel"
                            id="customerPhone"
                            class="form-input"
                            placeholder="Phone Number">
 
+                    <p class="error-message" id="customerPhoneError" aria-live="polite"></p>
+
+                    <label for="customerEmail" class="sr-only">Email Address</label>
+
                     <input type="email"
                            id="customerEmail"
                            class="form-input"
                            placeholder="Email Address">
+
+                    <p class="error-message" id="customerEmailError" aria-live="polite"></p>
 
                 </div>
 
@@ -113,6 +152,8 @@
                         Select Adventures
 
                     </h2>
+
+                    <p class="error-message" id="packageError" aria-live="polite"></p>
 
                     <label>
                         <input type="checkbox"
@@ -189,29 +230,65 @@
 
                         </h2>
 
-                        <p>
+                        <table class="info-table">
 
-                            2 Adventures = 5%
+                            <caption>Multi-booking discounts</caption>
 
-                        </p>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Adventures booked</th>
+                                    <th scope="col">Discount</th>
+                                </tr>
+                            </thead>
 
-                        <p>
+                            <tbody>
+                                <tr><td>1</td><td>0%</td></tr>
+                                <tr><td>2</td><td>5%</td></tr>
+                                <tr><td>3</td><td>10%</td></tr>
+                                <tr><td>More than 3</td><td>15%</td></tr>
+                            </tbody>
 
-                            3 Adventures = 10%
+                        </table>
 
-                        </p>
-
-                        <p>
-
-                            More Than 3 = 15%
-
-                        </p>
+                        <p class="table-note">VAT of 15% is added after the discount.</p>
 
                     </div>
 
                 </div>
 
             </div>
+
+            <!-- PRICE LIST -->
+
+            <section class="price-list">
+
+                <h2>Package &amp; Activity Prices</h2>
+
+                <table class="info-table">
+
+                    <caption>Prices per person (excluding VAT)</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Adventure</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Ultimate Adventure Day</td><td>Package</td><td>R1 500</td></tr>
+                        <tr><td>Family Explorer Package</td><td>Package</td><td>R1 500</td></tr>
+                        <tr><td>Mountain Adventure Package</td><td>Package</td><td>R1 500</td></tr>
+                        <tr><td>Corporate Team Challenge</td><td>Package</td><td>R1 500</td></tr>
+                        <tr><td>Ziplining Adventure</td><td>Activity</td><td>R750</td></tr>
+                        <tr><td>Kayaking Experience</td><td>Activity</td><td>R750</td></tr>
+                        <tr><td>Rock Climbing Session</td><td>Activity</td><td>R750</td></tr>
+                    </tbody>
+
+                </table>
+
+            </section>
 
             <!-- BUTTON -->
 
@@ -258,6 +335,8 @@
                 </button>
 
             </div>
+
+            <p class="form-status" id="bookingStatus" aria-live="polite"></p>
 
         </div>
 

@@ -47,35 +47,52 @@
 
                 </h1>
 
-                <nav>
+                <nav class="main-nav">
 
-                    <a href="index.html">Home</a>
+                <a href="index.html">Home</a>
 
-                    |
+                |
 
-                    <a href="about.html">About Us</a>
+                <a href="about.html">About Us</a>
 
-                    |
+                |
 
-                    <a href="overview.html">Packages</a>
+                <div class="dropdown">
 
-                    |
+                    <a href="overview.html" class="dropdown-toggle">Packages &#9662;</a>
 
-                    <a href="overview.html">Activities</a>
+                    <div class="dropdown-menu">
+                        <a href="ultimate-adventure.html">Ultimate Adventure Day</a>
+                        <a href="family-explorer.html">Family Explorer Package</a>
+                        <a href="mountain-adventure.html">Mountain Adventure Package</a>
+                        <a href="corporate-challenge.html">Corporate Team Challenge</a>
+                    </div>
 
-                    |
+                </div>
 
-                    <a href="fee-calculator.html">
-                        Calculate Fees
-                    </a>
+                |
 
-                    |
+                <div class="dropdown">
 
-                    <a href="contact.html">
-                        Contact Us
-                    </a>
+                    <a href="overview.html" class="dropdown-toggle">Activities &#9662;</a>
 
-                </nav>
+                    <div class="dropdown-menu">
+                        <a href="ziplining.html">Ziplining Adventure</a>
+                        <a href="kayaking.html">Kayaking Experience</a>
+                        <a href="rock-climbing.html">Rock Climbing Session</a>
+                    </div>
+
+                </div>
+
+                |
+
+                <a href="fee-calculator.html">Calculate Fees</a>
+
+                |
+
+                <a href="contact.html">Contact Us</a>
+
+            </nav>
 
             </div>
 
@@ -143,28 +160,50 @@
 
                     <br>
 
+                    <form id="enquiryForm" novalidate>
+
+                    <label for="enquiryName" class="sr-only">Full Name</label>
+
                     <input type="text"
+                           id="enquiryName"
                            placeholder="Full Name"
                            class="form-input">
 
+                    <p class="error-message" id="enquiryNameError" aria-live="polite"></p>
+
+                    <label for="enquiryEmail" class="sr-only">Email Address</label>
+
                     <input type="email"
+                           id="enquiryEmail"
                            placeholder="Email Address"
                            class="form-input">
 
+                    <p class="error-message" id="enquiryEmailError" aria-live="polite"></p>
+
+                    <label for="enquiryMessage" class="sr-only">Message</label>
+
                     <textarea
+                        id="enquiryMessage"
                         class="form-input"
                         rows="6"
+                        maxlength="500"
                         placeholder="Enter Message"></textarea>
+
+                    <p class="error-message" id="enquiryMessageError" aria-live="polite"></p>
 
                     <div class="center">
 
-                        <button class="btn">
+                        <button type="submit" class="btn">
 
                             Send Enquiry
 
                         </button>
 
                     </div>
+
+                    <p class="form-status" id="enquiryStatus" aria-live="polite"></p>
+
+                    </form>
 
                 </div>
 
@@ -240,6 +279,10 @@
         </footer>
 
     </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
 
 </body>
 
