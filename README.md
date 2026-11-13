@@ -5,6 +5,21 @@
 
 ---
 
+# Project Links
+
+| Item | Link |
+|---|---|
+| Published website | https://st10476655.github.io/Adventure-Escape-SA/ |
+| Video presentation (YouTube, unlisted) | https://youtu.be/gclzBvhsvno |
+| Task 2 video 1 (YouTube) | https://youtu.be/0MV1XqKhx50 |
+| Task 2 video 2 (YouTube) | https://youtu.be/Im6Z787_A2M |
+| Mobile application repository | https://github.com/ST10476655/AdventureEscapeSA |
+| Phase 3 repository | https://github.com/ntombimdlalose/Adventure-Escape-SA-Phase-3 |
+| Figma wireframes | https://www.figma.com/design/2gTpoW5mSHBA0Xv34JJmP9/Adventure-Escape-SA-Mobile-App-Wireframes |
+| PowerPoint presentation | [XHAW5112_G2_Adventure_Escape_Presentation.pptx](XHAW5112_G2_Adventure_Escape_Presentation.pptx) |
+
+---
+
 # Project Overview
 
 Adventure Escape SA is a tourism and adventure website designed to promote outdoor adventure experiences throughout the Western Cape, South Africa.
