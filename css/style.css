@@ -1931,3 +1931,45 @@ footer.site-footer{
 .contact-card p{
     margin-bottom:12px;
 }
+
+/* =====================================
+   UI/UX REFRESH: PHONE LAYOUT
+   Logo and title share the first row; the menu gets its own
+   full-width row. Calculator panels use the full screen width.
+===================================== */
+
+@media(max-width:600px){
+
+    header{
+        display:grid;
+        grid-template-columns:auto 1fr;
+        align-items:center;
+        column-gap:12px;
+        row-gap:10px;
+    }
+
+    .header-content{
+        display:contents;
+    }
+
+    .header-content h1{
+        grid-column:2;
+        font-size:20px;
+    }
+
+    .main-nav{
+        grid-column:1 / -1;
+        justify-content:flex-start;
+    }
+
+    .logo-section img{
+        width:56px;
+    }
+}
+
+@media(max-width:900px){
+
+    .fee-layout .column{
+        width:100%;
+    }
+}
