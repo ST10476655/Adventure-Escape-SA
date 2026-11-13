@@ -1900,3 +1900,34 @@ footer.site-footer{
         gap:0;
     }
 }
+
+/* =====================================
+   UI/UX REFRESH: ALIGNMENT FIXES
+===================================== */
+
+/* Fee calculator buttons had their own older colours */
+#calculateBtn,
+#submitBtn{
+    background:var(--orange);
+    color:var(--white);
+}
+
+#calculateBtn:hover,
+#submitBtn:hover{
+    background:var(--orange-dark);
+}
+
+/* Columns size to their content instead of stretching */
+.fee-layout{
+    align-items:flex-start;
+}
+
+/* Grid, table and panels share the same left and right edges */
+.overview-container,
+.price-list{
+    padding:0;
+}
+
+.contact-card p{
+    margin-bottom:12px;
+}
